@@ -22,6 +22,7 @@ const allowedOrigins = [
   'http://127.0.0.1:5501',
   'http://localhost:5501',
   'http://localhost:3000',
+  'https://baggage-store.netlify.app/',
   'https://baggage-store-production.up.railway.app/',  // your backend
   // Don't worry – Netlify URL will be added automatically below
 ];
