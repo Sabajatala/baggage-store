@@ -76,6 +76,22 @@ app.use(session({
     }
 }));
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to Baggage Store API!',
+    version: '1.0.0',
+    endpoints: {
+      products: '/api/products',
+      categories: '/api/categories',
+      auth: '/api/auth/login',
+      cart: '/api/session',
+      checkout: '/api/checkout/store',
+      // Add more as needed
+    },
+    docs: 'Check your frontend at https://baggage-store.netlify.app/'
+  });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/categories', categoryRoutes);
